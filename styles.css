@@ -480,6 +480,7 @@ h2 span{
 
 .about-img .me {
   width: 90%;
+  height: 90%;
   border-radius: 50%;
   border: .2rem solid #00abf0;
   box-shadow: 0px 0px 7px grey;
@@ -1105,5 +1106,79 @@ transform: translateY(0);
 
 
 
+/* -----------------------checking------------------ */
+@media (max-width: 768px) {
+  /* Existing styles for smaller screens */
 
+  body{
+    overflow: hidden;
+  }
+  .Home {
+    padding: 0 4%;
+  }
+
+  .content {
+    margin: -20px; /* Adjust margin as needed */
+  }
+
+  .content h1 {
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .b {
+    margin-left: 0; /* Adjust margin as needed */
+  }
+
+  .btn {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Add space between items */
+    max-width: 800px;
+    margin: 0 auto; 
+  }
+
+  .btn a {
+    width: 100%; /* Adjust width as needed */
+  }
+
+  .W1 {
+    text-align: center; /* Center the content */
+  }
+
+  .W1 .button {
+    margin: 10px 0; /* Add margin to create space between buttons */
+  }
+
+  /* .projects-container {
+    
+    grid-template-columns: repeat(1, 1fr); 
+    justify-content: space-between;
+  }
+
+  .projects-box {
+    max-width: 400px; 
+    height: 200px;
+  } */
+
+  /* Add or modify other styles as needed for responsiveness */
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .projects-box a {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+}
 
