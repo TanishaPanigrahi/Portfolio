@@ -1,385 +1,1184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanisha Panigrahi Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-      (function(){
-          emailjs.init("Q63ueiMHemooQGAUd");
-      })();
-    </script>
-    
-</head>
-<body>
-    <header class="header">
-        <a href="#" class="name">Tanisha Panigrahi</a>
-        
-        <div class="bx bx-menu" id="menu-icon"></div>
+/* styles.css */
 
-        <nav class="navbar">
-            <a href="#Home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <span class="active-nav"></span>
-        </nav>
-    </header>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
 
-<!-- ------------------------- HOME ------------------ -->
-    <section class="Home" id="Home">
-        <div class="content">
-          <div class="a">
-            <h1>Hi, I am <span>Tanisha Panigrahi</span></h1>
-            <div class="wrapper">
-              <ul class="dynamic-txts">
-                <li><span>ML Student</span></li>
-                <li><span>Java progammer</span></li>
-                <li><span>Python progammer</span></li>
-                <li><span>Freelancer</span></li>
-              </ul>
-            </div>
-            <div class="btn">
-                <a href="https://www.linkedin.com/in/viraj-raina/ " target="_blank">Hire me</a>
-                <a href="#contact">Contact me</a>
-            </div>
-            <div class="W1">
-                <div class="button">
-                  <a href="https://www.linkedin.com/in/viraj-raina/" target="_blank">
-                    <div class="icon"><i class="fab fa-linkedin"></i></div>
-                    <span>Linkedin</span>
-                  </a>
-                </div>
-                <div class="button">
-                  <a href="https://www.instagram.com/viraj_raina08/" target="_blank">
-                    <div class="icon"><i class="fab fa-instagram"></i></div>
-                    <span>Instagram</span>
-                  </a>
-                </div>
-                <div class="button">
-                  <a href="https://github.com/TanishaPanigrahi" target="_blank">
-                    <div class="icon"><i class="fab fa-github"></i></div>
-                    <span>Github</span>
-                  </a>
-                </div>
-                <div class="button">
-                  <a href="https://discord.com/channels/@me" target="_blank">
-                    <div class="icon"><i class="fab fa-discord"></i></div>
-                    <span>Discord</span>
-                  </a>
-                </div>
-              </div>
-          </div>
-              
-        </div>
-    </section>
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+    background: #081b29;
+    color: white;
+}
+
+/* -----------------------------------------NAME AND NAV BAR------------------------------ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    z-index: 100;
+}
+
+header.sticky {
+  background: #081b29;
+}
+
+.name{
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.name::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: .4s;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 25px;
+  color: white;;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 35px;
+  transition: .3s;
+}
+
+.navbar a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color: #00abf0;
+}
+
+#menu-icon{
+  font-size: 3.6rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+
+}
+
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+  align-items: center;
+}
+
+.Home{
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
+}
+
+.content{
+  display: flex; /* Make the social buttons flex containers */
+  align-items: center;
+  margin: -78px;
+
+}
 
 
-    <!-------------------------- ABOUT ME ----------------------->
-    <section class="about" id="about">
-      <h2 class="heading">About <span>Me</span></h2>
-
-      <div class="about-img">
-        <img class="me" src="./IMAGES/me.jpg" alt="">
-        <span class="circle-spin"></span>
-      </div>
-
-      <div class="about-content">
-        <h3>STUDENT</h3>
-        <p>Result-driven student with a passion for 
-          information system analysis and computer 
-          programming seeking for a job position as an IT 
-          professional to develop my potentials while 
-          performing the necessary tasks. </p>
-        
-        <div class="btn btns">
-          <a href="/PDF/Tanisha_CV_V1.0[1].pdf" download class="read">Dowload CV</a>
-        </div>
-
-      </div>
-    </section>
+/* ------------------------------------IMAGE CONTAINER------------------------------------ */
+.b{
+  position: relative;
+  margin-left: 300px;
+}
 
 
-    <!-- ---------------------------EDUCATION SECTION------------------- -->
-    <section class="education" id="education">
-      <h2 class="heading">My <span>journey</span></h2>
-    
-      <div class="education-row">
-        <div class="education-column">
-          <h3 class="title">Education</h3>
-    
-          <div class="education-box">
 
-            <div class="education-content">
-                <div class="context">
-                  <div class="year"><i class="bx bxs-calendar"> 2021 - 2025</i></div>
-                  <h3>10th</h3>
-                  <p>
-                    From Cambridge School Noida</p>
-                </div>
-              </div>
+.image::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 3s;
+  z-index: 2;
+}
+/* ------------------------------ data ----------------------- */
+.content h1{
+  position: relative;
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
 
-            <div class="education-content">
-              <div class="context">
-                <div class="year"><i class="bx bxs-calendar"> 2020 - 2021</i></div>
-                <h3>12th</h3>
-                <p>
-                From Ahlcon Public School</p>
-              </div>
-            </div>
+a h1 span {
+  color: white;
+}
 
-            <div class="education-content">
-              <div class="context">
-                <div class="year"><i class="bx bxs-calendar"> 2021 - 2025</i></div>
-                <h3>BTECH</h3>
-                <p>
-                3rd Year</p>
-              </div>
-            </div>
+ /* h3{
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+} */
 
-            
+h2{
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-            <!-- <div class="education-content">
-              <div class="context">
-                <div class="year"><i class="bx bxs-calendar"> 2021 - 2025</i></div>
-                <h3>BTECH</h3>
-                <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda</p>
-              </div>
-            </div> -->
+p{
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
 
-          </div>
-        </div>
+.content h1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+}
 
-        <div class="education-column">
-          <h3 class="title">Experience</h3>
-    
-          <div class="education-box">
-            <div class="education-content">
-              <div class="context">
-                <div class="year"><i class="bx bxs-calendar"> 2023 - 2024</i></div>
-                <h3>SIH</h3>
-                <p>Participitated in college level SIH</p>
-              </div>
-            </div>
+/* --------------------------------------TYPING ANIMATION ------------------------------------*/
 
-            <!-- <div class="education-content">
-              <div class="context">
-                <div class="year"><i class="bx bxs-calendar"> 2021 - 2025</i></div>
-                <h3>BTECH</h3>
-                <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda</p>
-              </div>
-            </div>
+.wrapper{
+  position: relative;
+  display: flex;
+}
 
-            <div class="education-content">
-              <div class="context">
-                <div class="year"><i class="bx bxs-calendar"> 2021 - 2025</i></div>
-                <h3>BTECH</h3>
-                <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda</p>
-              </div>
-            </div>
 
-            <div class="education-content">
-              <div class="context">
-                <div class="year"><i class="bx bxs-calendar"> 2021 - 2025</i></div>
-                <h3>BTECH</h3>
-                <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda</p>
-              </div>
-            </div> -->
 
-          </div>
-        </div>
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
 
-      </div>
-    </section>
-    
-    <!-----------------------------Skills----------------------------->
 
-    <section class="skills" id="skills">
-      <h2 class="heading">My <span>Skills</span></h2>
+.dynamic-txts li{
+  list-style: none;
+  color: #00abf0;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #081b29;
+  border-left: 2px solid #00abf0;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
 
-      <div class="skills-row">
+@media (max-width: 768px) {
+  .dynamic-txts li {
+    animation: none; /* Stop the animation */
+  }
 
-        <div class="skills-column">
-          <h3 class="title">Coding Skills</h3>
+  .dynamic-txts li span::after {
+    animation: none;
+    border-left: #081b29;
+  }
+}
 
-          <div class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>HTML <span>90%</span></h3>
+/* ----------------------------------------------2 BUTTONS--------------------------------------- */
+.Home .btn {
+  position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
 
-                <div class="bar"><span></span></div>
-              </div>
+.Home .btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.9s;
+  z-index: 2;
+}
 
-              <div class="progress">
-                <h3>CSS <span>80%</span></h3>
 
-                <div class="bar"><span></span></div>
-              </div>
+.btn a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
 
-              <div class="progress">
-                <h3>PYTHON <span>60%</span></h3>
+.btn a:nth-child(1) {
+    background: transparent;
+    color: #00abf0;
+}
 
-                <div class="bar"><span></span></div>
-              </div>
+.btn a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
 
-              <div class="progress">
-                <h3>C <span>60%</span></h3>
+.btn a:nth-child(1):hover {
+    color: #081b29;
+    box-shadow: 0px 0px 10px grey;
+}
 
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
+.btn a:nth-child(2):hover {
+    color: #081b29;
+    box-shadow: 0px 0px 10px grey;
+}
 
-        <div class="skills-column">
-          <h3 class="title">Professional Skills</h3>
+.btn a:nth-child(1)::before {
+    background: #00abf0;
+}
 
-          <div class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>Web Design <span>90%</span></h3>
+.btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00b4f0;
+    z-index: -1;
+    transition: .3s;
+}
 
-                <div class="bar"><span></span></div>
-              </div>
+.btn a:hover::before{
+    width: 100%;
+}
 
-              <div class="progress">
-                <h3>Web Devlopment <span>70%</span></h3>
 
-                <div class="bar"><span></span></div>
-              </div>
+/* -----------------------------------------------icons  code-------------------------------------- */
 
-              <div class="progress">
-                <h3>Java Devlopment<span>60%</span></h3>
+.W1{
+  position: relative;
+  margin-top: 20px;
+}
 
-                <div class="bar"><span></span></div>
-              </div>
+.W1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 2.5s;
+  z-index: 2;
+}
 
-              <div class="progress">
-                <h3>Machine learning <span>30%</span></h3>
+.W1 .button{
+  position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    /* float: left; */
+    margin: 0  5px;
+    overflow: hidden;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
 
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
+  
+  
+  .W1 .button:hover{
+    width: 200px;
+    box-shadow: 0px 0px 10px grey;
+  }
+  
+  .W1 .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
 
-      </div>
-    </section>
-     <!-- --------------------------------------------------projects----------------------------------- -->
-     <section class="projects" id="projects">
-      <h2 class="heading">Latest <span>Project</span></h2>
+  
 
-      <div class="projects-container">
-        <div class="projects-box">
-          <img src="./IMAGES/game.jpg" alt="">
-          <div class="projects-layer">
-            <h4>SIH PROJECT</h4>
-            <p>Identify medicinal plants using machine learning</p>
-            <a href="https://github.com/hacktoberfest-codex/Yogis-Eye" target="_blank"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
+  .W1 .button:nth-child(1):hover .icon{
+    background: blue;
 
-        <div class="projects-box">
-          <img src="./IMAGES/game.jpg" alt="">
-          <div class="projects-layer">
-            <h4>Portfolio</h4>
-            <p>Using Web Devlopment</p>
-            <a href="https://github.com/TanishaPanigrahi/Portfolio" target="_blank"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
+  }
+  
+  .W1 .button:nth-child(2):hover .icon{
+    background: #E1306C;
+  }
+  
+  .W1 .button:nth-child(3):hover .icon{
+    background: #333;
+  }
+  
+  .W1 .button:nth-child(4):hover .icon{
+    background: black;
+  }
+  
+  .W1 .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+    color: black; /* Add this line to set the icon color to black */
+  }
+  
+  .W1 .button:hover .icon i{
+    color: #fff;
+  }
+  
+  .W1 .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+  }
+  
+  .W1 .button:nth-child(1):hover span{
+    color: blue;
+  }
+  
+  .W1 .button:nth-child(2):hover span{
+    color: #E1306C;
+  }
+  
+  .W1 .button:nth-child(3):hover span{
+    color: #333;
+  }
 
-        <div class="projects-box">
-          <img src="./IMAGES/game.jpg" alt="">
-          <div class="projects-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
-            <a href="#" target="_blank"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
+  .W1 .button:nth-child(4):hover span{
+    color: black;
+  }
 
-        <div class="projects-box">
-          <img src="./IMAGES/game.jpg" alt="">
-          <div class="projects-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
-            <a href="#" target="_blank"><i class="bx bx-link-external" ></i></a>
-          </div>
-        </div>
+/* Add this style to your CSS file */
+.W1 .button a {
+  text-decoration: none;
+}
 
-        <div class="projects-box">
-          <img src="./IMAGES/game.jpg" alt="">
-          <div class="projects-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
 
-        <div class="projects-box">
-          <img src="./IMAGES/game.jpg" alt="">
-          <div class="projects-layer">
-            <h4>Web Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
+/* KEYFRAMES ANIMATION  */
 
-      </div>
-    </section>
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
 
-    <!-------------------------Contact------------------------------>
+/* -----------------------------------------ABOUT ME----------------------------------- */
 
-    <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: #112e42;
+  padding-bottom: 6rem;
+}
 
-      <form id="contactForm">
+.heading{
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
-        <div class="input-box">
-          <div class="input-field">
-            <input type="text" id="name" placeholder="Full Name" required>
-            <span class="focus"></span>
-          </div>
-          <div class="input-field">
-            <input type="email" id="email" placeholder="Email Address" required>
-            <span class="focus"></span>
-          </div>
-        </div>
+h2 span{
+  color: #00abf0;
+}
 
-        <div class="input-box">
-          <div class="input-field">
-            <input type="text" id="mobile" placeholder="Moblie Number" required>
-            <span class="focus"></span>
-          </div>
-          <div class="input-field">
-            <input type="text" id="subject" placeholder="Email Subject" required>
-            <span class="focus"></span>
-          </div>
-        </div>
+.about-img{
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        <div class="textarea-field">
-          <textarea name="" id="message" cols="30" rows="10" placeholder="Your message" required></textarea>
-          <span class="focus"></span>
-        </div>
+.about-img .me {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: .2rem solid #00abf0;
+  box-shadow: 0px 0px 7px grey;
+}
 
-        <div class="btn btns">
-          <button type="submit" class="btn" onclick="sendmail()">Submit</button>
-        </div>
+.about .btn{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
 
-      </form>
-    </section>
-    <script src="script.js"></script>
-    
-</body>
-</html>
+.about-img .circle-spin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 110%;
+  border-radius: 50%;
+  border-top: .2rem solid #112e42;
+  border-bottom: .2rem solid #112e42;
+  border-left: .2rem solid #00abf0;
+  border-right: .2rem solid #00abf0;
+}
+
+.about-content{
+  text-align: center;
+}
+
+.about-content h3{
+  font-size: 2.6rem;
+  color: white;
+}
+
+.about-content p{
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.btn.btns{
+  display: inline-block;
+  width: 15rem;
+}
+
+/* ---------------------------Education-------------------------- */
+
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  padding-bottom: 5rem;
+  margin-top: 5rem; 
+}
+
+.education .education-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  /* Add this linjustify-/content: space-between; e to make columns side by side */
+}
+
+.education-row .education-column{
+  flex: 1 1 40rem; /* Modify this line to set the width of each column */
+  /* text-align: center;  */
+}
+
+.education-column .title{
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 0; /* Adjust the margin to center the title */
+}
+
+.education-column .education-box{
+  border-left: .2rem solid #00abf0;
+}
+
+.education-box .education-content{
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-box .education-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: #00abf0;
+  border-radius: 50%;
+}
+
+.education-content .context{
+  position: relative;
+  padding: 1.5rem;
+  border: .2rem solid #00abf0;
+  border-radius: .6rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.education-content .context::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #112e42;
+  z-index: -1;
+  transition: .5s;
+}
+
+.education-content .context:hover::before {
+  width: 100%;
+}
+
+.education-content .context .year{
+  font-size: 1.5rem;
+  color: #00abf0;
+  padding-bottom: .5rem;
+}
+
+.education-content .context .year i { 
+    padding-right: .5rem;
+}
+
+.education-content .context h3 {
+  font-size: 1.5rem;
+}
+
+.education-content .context p {
+  font-size: 1.6rem;
+  padding-top: .5rem;
+}
+
+/* ------------------SKills------------------------------------------------------------- */
+
+.skills {
+  /* min-height: auto; */
+  padding-bottom: 7rem;
+  background: #112e42;
+
+}
+
+.skills .skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.skills-row .skills-column {
+  flex: 1 1 40rem;
+}
+
+.skills-column .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content {
+  position: relative;
+  border: .2rem solid #00abf0;
+  border-radius: .6rem;
+  padding: .5rem 1.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.skills-box .skills-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: .5s;
+}
+
+.skills-box .skills-content:hover::before {
+  width: 100%;
+}
+
+.skills-content .progress {
+  padding: 1rem 0;
+}
+
+.skills-content .progress h3 {
+  font-size: 1.7rem;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.skills-content .progress h3 span { 
+  color: white; 
+}
+
+.skills-content .progress .bar {
+  height: 2.5rem;
+  border-radius: .6rem;
+  border: .2rem solid #00abf0;
+  padding: .5rem; 
+  margin: 1rem 0; 
+}
+
+.skills-content .progress .bar  span {
+  display: block;
+  height: 100%;
+  border-radius: .3rem;
+  background: #00abf0;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+  width: 90%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+  width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+  width: 60%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+  width: 60%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+  width: 90%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+  width: 70%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+  width: 60%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+  width: 30%;
+}
+
+/* --------------------------contact------------------------ */
+
+.contact {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact form .input-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+  position: relative;
+  width: 49%;
+  margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input, 
+.contact form .textarea-field textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: transparent;
+  border-radius: .6rem;
+  border: .2rem solid #00abf0;
+}
+
+.contact form .input-box .input-field input::placeholder, 
+.contact form .textarea-field textarea::placeholder {
+  color: white;
+}
+
+.contact form .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #112e42;
+  border-radius: .6rem;
+  z-index: -1;
+  transition:  .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus{
+  width: 100%;
+}
+
+.contact form .textarea-field {
+  position: relative;
+  margin: .8rem 0 2.7rem;
+  display: flex;
+}
+
+.contact form .textarea-field textarea {
+  resize: none;
+}
+
+.contact form .btn.btns .btn {
+  cursor: pointer;
+}
+
+/* ----------------for submit button------------------------------- */
+
+.btn.btns {
+  height: 50px;
+}
+
+.btn.btns .btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn.btns .btn:nth-child(1) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn.btns .btn:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn.btns .btn:nth-child(1):hover {
+    color: #081b29;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.btn.btns .btn:nth-child(2):hover {
+    color: #081b29;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.btn.btns .btn:nth-child(1)::before {
+    background: #00abf0;
+}
+
+.btn.btns .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00b4f0;
+    z-index: -1;
+    transition: .3s;
+}
+
+.btn.btns .btn:hover::before{
+    width: 100%;
+}
+
+
+/* BREAKPOINTS */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 4%;
+  }
+
+  section {
+    padding: 10rem 4% 2rem ;
+  }
+
+  .Home {
+    padding: 0 4%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  header {
+    background: #081b29;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 1rem 4%;
+    background: #081b29;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    transition: .25s ease;
+    transition-delay: .25s;
+  }
+
+  .navbar.active {
+    left: 0;
+    transition-delay: 0s;
+  }
+
+  .navbar .active-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellowgreen;
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    z-index: -1;
+    transition: .25s ease;
+    transition-delay:  0s;
+  }
+
+  .navbar.active .active-nav {
+    transition-delay: .25s;
+    left: 0s;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    transform:  translate(-20rem);
+  }
+
+  .navbar.active a{
+    transform: translateX(0);
+    transition-delay: .25s;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ---------------------------------certificates------------------------ */
+
+/* .certificates {
+  padding-bottom: 7rem;
+  background: #112e42;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+}
+.images {
+  display: flex;
+  width: 100%;
+}
+.images img {
+  height: 400px;
+  width: 100%;
+  transition: all 0.15s ease;
+}
+.images input {
+  display: none;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.dots label {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: solid #fff 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin: 5px;
+}
+.dots label:hover {background: #fff;}
+#img1:checked ~ .m1 {
+  margin-left: 0;
+}
+#img2:checked ~ .m2 {
+  margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+  margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+  margin-left: -300%;
+} */
+
+
+/* -----------------------------------------projects--------------------------------- */
+
+.projects {
+  /* min-height: auto; */
+  padding-bottom: 7rem;
+  background: #112e42;
+
+}
+
+.projects h2 {
+  margin-bottom: 4rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.projects-box {
+  /* position: relative;
+  overflow: hidden; */
+  width: 200%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  height: 200px; /* Set the fixed height for all projects */
+}
+
+.projects-container .projects-box {
+  position: relative;
+  border-radius:  2rem;
+  box-shadow: 0 0 1rem #081b29;
+  overflow: hidden;
+  display: flex;
+}
+
+.projects-box img {
+  width: 100%;
+  transition: .5s ease;
+}
+
+.projects-box:hover img {
+  transform: scale(1.1);
+} 
+
+.projects-box .projects-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, .1), #00abf0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: .5s ease;
+}
+
+.projects-box:hover .projects-layer {
+transform: translateY(0);
+}
+
+.projects-layer h4 {
+  font-size: 3rem;
+}
+
+.projects-layer p {
+  font-size: 1.6rem;
+  margin: .3rem 0 1rem;
+}
+
+.projects-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: #081b29;
+  border-radius: 50%;
+}
+
+.projects-layer a i {
+  font-size: 2rem;
+  color: #00b4f0;
+}
+
+
+
+
+/* -----------------------checking--------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Existing styles for smaller screens */
+
+  body{
+    overflow: hidden;
+  }
+  .Home {
+    padding: 0 4%;
+  }
+
+  .content {
+    margin: -20px; /* Adjust margin as needed */
+  }
+
+  .content h1 {
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center horizontally */
+    font-size: 50px ; /* font size reduced*/
+  }
+
+
+  .b {
+    margin-left: 0; /* Adjust margin as needed */
+  }
+
+  .btn {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Add space between items */
+    max-width: 800px;
+    margin: 0 auto; 
+  }
+
+  .btn a {
+    width: 100%; /* Adjust width as needed */
+  }
+
+  .W1 {
+    text-align: center; /* Center the content */
+  }
+
+  .W1 .button {
+    margin: 10px 0; /* Add margin to create space between buttons */
+  }
+
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .projects-box a {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+}
+
