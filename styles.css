@@ -241,6 +241,16 @@ p{
   }
 }
 
+@media (max-width: 768px) {
+  .dynamic-txts li {
+    animation: none; /* Stop the animation */
+  }
+
+  .dynamic-txts li span::after {
+    animation: none;
+    border-left: #081b29;
+  }
+}
 
 /* ----------------------------------------------2 BUTTONS--------------------------------------- */
 .Home .btn {
@@ -1106,7 +1116,7 @@ transform: translateY(0);
 
 
 
-/* -----------------------checking------------------ */
+/* -----------------------checking--------------------------------------------------------- */
 @media (max-width: 768px) {
   /* Existing styles for smaller screens */
 
@@ -1124,7 +1134,9 @@ transform: translateY(0);
   .content h1 {
     text-align: center; /* Center the text */
     margin: 0 auto; /* Center horizontally */
+    font-size: 50px ; /* font size reduced*/
   }
+
 
   .b {
     margin-left: 0; /* Adjust margin as needed */
@@ -1149,18 +1161,6 @@ transform: translateY(0);
     margin: 10px 0; /* Add margin to create space between buttons */
   }
 
-  /* .projects-container {
-    
-    grid-template-columns: repeat(1, 1fr); 
-    justify-content: space-between;
-  }
-
-  .projects-box {
-    max-width: 400px; 
-    height: 200px;
-  } */
-
-  /* Add or modify other styles as needed for responsiveness */
 }
 
 @media (max-width: 768px) {
